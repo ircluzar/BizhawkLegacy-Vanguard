@@ -107,9 +107,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CorruptCore">
-      <HintPath>..\..\RTCV\Build\CorruptCore.dll</HintPath>
-    </Reference>
     <Reference Include="GongShell">
       <HintPath>..\References\GongShell.dll</HintPath>
     </Reference>
@@ -122,18 +119,12 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualBasic" Condition=" '$(OS)' == 'Windows_NT' " />
-    <Reference Include="NetCore">
-      <HintPath>..\..\RTCV\Build\NetCore.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\OpenTK.dll</HintPath>
-    </Reference>
-    <Reference Include="RTCV.Common">
-      <HintPath>..\..\RTCV\Build\RTCV.Common.dll</HintPath>
     </Reference>
     <Reference Include="SlimDX, Version=4.0.10.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -157,9 +148,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vanguard">
-      <HintPath>..\..\RTCV\Build\Vanguard.dll</HintPath>
-    </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -1707,6 +1695,22 @@
     <EmbeddedResource Include="Resources\courier16px.fnt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\RTCV\Source\Libraries\Common\Common.csproj">
+      <Project>{ce42f3a0-70f1-4c51-935c-6531c198b815}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTCV\Source\Libraries\CorruptCore\CorruptCore.csproj">
+      <Project>{59f005d8-d36d-4c37-bf7d-7cc4052837ab}</Project>
+      <Name>CorruptCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTCV\Source\Libraries\NetCore\NetCore.csproj">
+      <Project>{7dfb45bc-8b86-449e-b1b2-0f91e48cb4ec}</Project>
+      <Name>NetCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RTCV\Source\Libraries\Vanguard\Vanguard.csproj">
+      <Project>{da6f48a8-793c-4994-9fcf-99e8392f7609}</Project>
+      <Name>Vanguard</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BizHawk.Client.ApiHawk\BizHawk.Client.ApiHawk.csproj">
       <Project>{8e2f11f2-3955-4382-8c3a-ceba1276caea}</Project>
       <Name>BizHawk.Client.ApiHawk</Name>
